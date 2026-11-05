@@ -91,3 +91,17 @@ h1 {
     line-height: 1.1;
     z-index: 1;
 }
+
+.spin 
+{
+    position: absolute;
+    inset: 0;
+    animation: spin 40s linear infinite;
+}
+
+@keyframes spin
+{
+    to {
+        transform: rotate(360deg);
+    }
+}
