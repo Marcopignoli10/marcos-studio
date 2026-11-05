@@ -166,3 +166,11 @@ h1 {
     margin: 0;
 }
 
+.work 
+{
+    margin: 0 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
