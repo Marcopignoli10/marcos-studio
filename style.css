@@ -1,0 +1,67 @@
+@font-face {
+    font-family: "Chillax";
+    src: url("fonts/Chillax-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-display: swap;
+}
+
+:root
+ {
+    --bg: #0A0A0A;
+    --text: #f5f2e6;
+    --accent: #e03a2f;
+    --font-body: "Inter", sans-serif;
+    --font-label: "Michroma", sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 40vh 1rem 0;
+    text-align: center;
+}
+
+.label {
+    font-family: var(--font-label);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+}
+
+h1 {
+    font-family: "Chillax", sans-serif;
+    font-weight: 700;
+}
+
+
+
+.enter-btn{
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.9rem 1.6rem;
+    font-family: var(--font-label);
+    font-size: 0.75rem;
+    letter-spacing: 0.1rem;
+    color: var(--text);
+
+
+    text-decoration: none;
+
+    border: 1px solid var(--text);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.enter-btn:hover 
+{
+    background-color: var(--text);
+    color: var(--bg);
+}
+
+.ring img
+{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
