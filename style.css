@@ -127,3 +127,42 @@ h1 {
     text-align: center;
     margin: 0 0 1rem;
 }
+
+
+
+.room
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+.back {
+    align-self: flex-start;
+    font-family: var(--font-label);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    color: var(--text);
+    text-decoration: none;
+
+}
+
+.room h1 
+{
+    margin: 0;
+}
+
+.piece 
+{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+.caption
+{
+    font-size: 0.9rem;
+    margin: 0;
+}
+
