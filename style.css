@@ -219,3 +219,105 @@ h1 {
             opacity: 1;
         transform: translateY(0);
 }
+
+
+/*test 5 or 6pxs for gap and top n  right same rem */
+
+.burger 
+{
+    position: fixed;
+        top: 1rem;
+
+            right: 1rem;
+            
+            z-index: 30;
+
+            width: 44px;
+
+                height: 44px;
+
+    background: none;
+
+        border: none;
+
+            cursor: pointer;
+            display: flex;
+                flex-direction: column;
+
+                justify-content: center;
+                gap: 6px;
+}
+
+.burger span
+{
+    display: block;
+
+    height: 2px;
+
+        background-color: var(--text);
+
+                transition: transform 0.3s ease, opacity 0.3s ease;
+
+}
+
+.burger.open span:nth-child(1)
+{
+     transform: translateY(8px) rotate(45deg);
+    }
+
+.burger.open span:nth-child(2)
+{
+     opacity: 0;
+    }
+
+
+    .burger.open span:nth-child(3)
+{
+     transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+
+.menu
+{
+    position: fixed;
+        inset: 0;
+
+        z-index: 20;
+
+            background-color: var(--bg);
+
+                display: flex;
+
+                        flex-direction: column;
+                
+                            align-items: center;
+
+                    justify-content: center;
+
+                gap: 1.5rem;
+
+            opacity: 0;
+
+        visibility: hidden;
+
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+}
+
+
+.menu.open
+{
+    opacity: 1;
+
+        visibility: visible;
+}
+
+.menu a 
+{
+    font-family: "Chillax", sans-serif;
+        font-weight: 700;
+            font-size: 2rem;
+                color: var(--text);
+                    text-decoration: none;
+}
