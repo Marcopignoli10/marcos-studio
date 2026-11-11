@@ -418,3 +418,33 @@ h1 {
                     .panel:nth-child(4) { height: 460px}
 
     }
+
+                    .panel
+    {
+        transition: transform 0.3s ease, opacity 0.3 ease;
+
+    }
+                    .panel img
+    {
+        transition: filter 0.3s ease;
+    }
+
+                @media (hover: hover)
+{
+                .panels:hover .panel
+    {
+        opacity: 0.5s;
+    }
+
+            .panels .panel:hover
+            {
+                opacity: 1;
+                    transform: translateY(-12px);
+            }
+
+            .panel:hover img
+            {
+                filter: brightness(1.2);
+            }
+
+}
