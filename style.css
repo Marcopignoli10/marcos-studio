@@ -448,3 +448,33 @@ h1 {
             }
 
 }
+
+        .gallery
+    {
+        display: flex;
+
+            align-items: center;
+
+                gap: 1rem;
+
+                    width: 100%;
+
+                overflow-x: auto;
+
+            scroll-snap-type: x mandatory;
+
+        padding: 1rem 0;
+
+    }
+
+
+        .gallery .work
+    {
+        flex: 0 0 75%;
+
+            scroll-snap-align: center;
+
+        margin: 0;
+    }
+
+    
