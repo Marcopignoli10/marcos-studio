@@ -1,8 +1,8 @@
 {
     "fantasy": [
         {"title": "Regular mondays", "year": 2025, "image": "images/drawing1.jpg.jpeg" },
-            {"title": "Absolute Batman", "year": 2025, "image": "images/drawing1.jpg.jpeg" },
-                {"title": "Grace", "year": 2025, "image": "images/drawing1.jpg.jpeg" }
+            {"title": "Absolute Batman", "year": 2025, "image": "images/drawing2.jpg.jpeg" },
+                {"title": "Grace", "year": 2025, "image": "images/drawing3.jpg.jpeg" }
 
     ]
 }
