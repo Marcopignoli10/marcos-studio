@@ -1,9 +1,23 @@
 {
     "fantasy": [
-        {"title": "Regular mondays", "year": 2025, "image": "images/drawing1.webp.webp" },
-            {"title": "Absolute Batman", "year": 2025, "image": "images/drawing2.jpg.webp" },
-                {"title": "Grace", "year": 2025, "image": "images/drawing3.jpg.webp" }
+        {"title": "Regular mondays", "year": 2025, "image": "images/drawing1.jpg_result.webp" },
+            {"title": "Absolute Batman", "year": 2025, "image": "images/drawing2.jpg_result.webp" },
+                {"title": "Grace", "year": 2025, "image": "images/drawing3.jpg_result.webp" }
 
+    ],
+    "portraits": [
+         {"title": "Chelsea", "year": 2025, "image": "images/portrait1_result.webp" },
+            {"title": "Amara", "year": 2025, "image": "images/portrait3_result.webp" },
+                {"title": "kait", "year": 2026, "image": "images/portrait2_result.webp" }
+    ],
+
+    "digitalart": [
+         {"title": "Project cover for comic", "year": 2025, "image": "images/digitalart1_result.webp" },
+            {"title": "Dream", "year": 2025, "image": "images/digitalart2_result.webp" },
+                {"title": "Panel prototype for comic", "year": 2025, "image": "images/digitalart3_result.webp" },
+
+                    {"title": "Panel prototype for comic", "year": 2025, "image": "images/digitalart4_result.webp" },
+                        {"title": "Weaver", "year": 2025, "image": "images/digitalart5_result.webp" }
     ]
 }
 
