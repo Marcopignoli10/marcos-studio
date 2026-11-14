@@ -95,3 +95,22 @@
         gallery.addEventListener("scroll", updateCounter);   //updates every row move
 
 
+                        const progress = document.createElement("div");
+                progress.className = "progress";
+
+                        document.body.appendChild(progress);
+
+                function updateProgress()
+                {
+                        const maxScroll = gallery.scrollWidth - gallery.clientWidth;
+
+                                if (maxScroll > 0)
+
+                                        {
+                                                const percent = (gallery.scrollLeft / maxScroll) * 100;
+                                                        
+                                                progress.style.width = percent + "%";
+                                        }
+                }
+
+                gallery.addEventListener("scroll", updateProgress);

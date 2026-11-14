@@ -547,3 +547,20 @@ h1 {
 
                                             letter-spacing: 0.1rem;
                 }
+
+          .progress
+        {
+            position: fixed;
+
+                left: 0;
+
+                    bottom: 0;
+
+                        height: 3px;
+
+                    width: 0;
+
+                background-color: var(--accent);
+
+            transition: width 0.2s ease;
+        }
