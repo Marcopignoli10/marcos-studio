@@ -619,3 +619,15 @@ h1 {
 
                         background-color: var(--text)
                     }
+
+
+    .chapter h2
+    {
+        font-family: "Chillax", sans-serif;
+
+            font-weight: 700;
+
+            font-size: 2rem;
+
+        margin: 0;
+    }
