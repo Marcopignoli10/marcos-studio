@@ -6,7 +6,8 @@
 
     fetch("data.json")
 
-        .then(function (response) {       //stacksoverflow said .then(function) is easier than async/wait
+        .then(function (response) 
+        {                                    //stacksoverflow said .then(function) is easier than async/wait
                 return response.json();
         })
 
@@ -26,4 +27,71 @@
 
             
             });
+
+            updateCounter();
         });
+                       // left and right arrow buttons 
+
+            const leftArrow = document.createElement("button");           
+            leftArrow.className = "arrow arrow-left";
+                    leftArrow.setAttribute("aria-label", "Previous drawing");
+                            leftArrow.textContent = "<";
+
+                const rightArrow = document.createElement("button");
+                rightArrow.className = "arrow arrow-right";
+                        rightArrow.setAttribute("aria-label", "Next drawing");
+                                rightArrow.textContent = ">";
+
+    document.body.appendChild(leftArrow);
+    document.body.appendChild(rightArrow);
+
+
+    leftArrow.addEventListener("click", function ()
+{
+        gallery.scrollBy({ left: -gallery.clientWidth * 0.75, behavior: "smooth" });
+});
+
+        rightArrow.addEventListener("click", function () 
+{
+        gallery.scrollBy({ left: gallery.clientWidth * 0.75, behavior: "smooth" });
+});
+
+
+                        const counter = document.createElement("p"); //counter 
+                                counter.className= "counter";
+
+                                        document.body.appendChild(counter);
+
+                
+                function updateCounter()
+                {
+                        const items = gallery.children;
+
+                                const middle = gallery.scrollLeft + gallery.clientWidth / 2;
+                                        let current = 0;
+                                        
+                                        let smallestGap = Infinity;
+
+                        
+                        for (let i = 0; i < items.length; i++)
+                        {
+                                const itemMiddle = items[i].offsetLeft + items[i].clientWidth / 2;
+
+                                        const gap = Math.abs(itemMiddle - middle);
+
+                                if (gap < smallestGap)
+
+                                {
+                                        smallestGap = gap;
+                                        
+                                        current = i;
+                                }
+                        }
+
+                        counter.textContent = (current + 1) + " / " + items.length;
+                }
+
+
+        gallery.addEventListener("scroll", updateCounter);   //updates every row move
+
+
