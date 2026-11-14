@@ -564,3 +564,58 @@ h1 {
 
             transition: width 0.2s ease;
         }
+
+
+        .timeline
+        {
+            position: relative;
+
+                align-items: stretch;
+
+                    width: 100%;
+
+                        max-width: 400px;
+        }
+
+            .timeline::before
+            {
+                content: "";
+                    position: absolute;
+                        top: 0;
+                            bottom:0;
+                        left: 6px;
+                    width: 1px;
+                background-color: var(--text);
+            opacity: 0.6;
+
+            }
+
+                .entry
+                {
+                    position: relative;
+
+                        align-items: flex-start;
+
+                        padding-left: 2rem;
+
+                    text-align: left;
+                } 
+
+                    .entry::before
+                    {
+                        content: "";
+
+                            position: absolute;
+
+                                left: 1px;
+
+                                    top: 0.2rem;
+
+                                    width: 11px;
+
+                                height: 11px;
+
+                            border-radius: 50%;
+
+                        background-color: var(--text)
+                    }
