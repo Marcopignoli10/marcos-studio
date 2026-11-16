@@ -114,3 +114,48 @@
                 }
 
                 gallery.addEventListener("scroll", updateProgress);
+
+
+        const viewer = document.createElement("div");  //big view of a single sketch
+                
+                viewer.className = "viewer";
+                        viewer.innerHTML = '<button class="viewer-close" aria-label="Close">X</button><img class="viewer-image" src="" alt="">';
+                                document.body.appendChild(viewer);
+
+                        const viewerImage = viewer.querySelector(".viewer-image");
+                                const viewerClose = viewer.querySelector(".viewer-close");
+
+
+        gallery.addEventListener("click", function (event)
+{
+        if (event.target.classList.contains("piece"))
+        {
+                viewerImage.src = event.target.src;
+
+                        viewerImage.alt = event.target.alt;
+
+                                viewer.classList.add("open");
+        }
+});
+
+                function closeViewer()
+                {
+                        viewer.classList.remove("open");
+                }
+
+
+        viewerClose.addEventListener("click", closeViewer);
+
+        
+        
+                        document.addEventListener("keydown", function (event)
+                        {
+                                if (event.key === "Escape")
+                                {
+                                        closeViewer();
+                                }
+                        });
+
+
+
+

@@ -631,3 +631,72 @@ h1 {
 
         margin: 0;
     }
+
+
+    .piece
+    {
+        cursor: pointer;
+
+    }
+
+            .viewer
+            {
+                position: fixed;
+
+                    inset: 0;
+
+                        z-index: 40;  /*try 30, n 42 but preferrably 40 */
+
+                            background-color: var(--bg);
+
+                                display: flex;
+
+                                    align-items: center;
+
+                                        justify-content: center;
+
+                                            opacity: 0;
+
+                                                visibility: hidden;
+
+                                                    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+                                            
+            }
+
+                .viewer.open
+                {
+                    opacity: 1;
+                        visibility: visible;
+                }
+
+                    .viewer-image
+                    {
+                            max-width: 95%;
+                                max-height: 85vh;
+                            object-fit: contain;
+                    }
+
+                        .viewer-close
+                        {
+                            position: absolute;
+
+                                top: 1rem;
+
+                                    right: 1rem;
+
+                                        width: 44px;
+
+                                            height: 44px;
+
+                                            background: none;
+
+                                        border: 1px solid var(--text);
+
+                                    color: var(--text);
+
+                                        font-family: var(--font-label);
+
+                                                cursor: pointer;
+
+                        }
