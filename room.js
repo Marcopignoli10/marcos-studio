@@ -88,6 +88,14 @@
                                 }
                         }
 
+
+                                for (let i = 0;i < items.length; i++)
+                                {
+                                        items[i].classList.toggle("active", i === current);
+                                }
+
+
+
                         counter.textContent = (current + 1) + " / " + items.length;
                 }
 

@@ -778,3 +778,35 @@ h1 {
             transition: none;
         }
     }
+
+                        .gallery .work
+                        {
+                            transform: scale(0.8);
+                                    opacity: 0.5;
+                            transition: transform 0.4s ease, opacity 0.4s ease;
+
+                        }
+
+                            .gallery .work.active
+                            {
+                                transform: scale(1);
+
+                                opacity: 1;
+                            }
+
+                            @media (min-width: 768px)
+                            {
+                                .gallery
+                                {
+                                    gap: 3rem;
+                                        padding-left: calc(50% - 210px);
+                                    padding-right: calc(50% - 210px);
+
+                                }
+
+                                .gallery .work
+                                {
+                                        flex: 0 0 420px;
+                                        opacity: 0.7;
+                                }
+                            }
