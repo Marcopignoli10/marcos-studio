@@ -83,12 +83,12 @@ h1 {
 .ring h1 
 {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    font-size: 1.6rem;
-    line-height: 1.1;
+        top: 50%;
+            left: 50%;
+                transform: translate(-50%, -50%);
+                    margin: 0;
+            font-size: 1.6rem;
+        line-height: 1.1;
     z-index: 1;
 }
 
@@ -725,3 +725,22 @@ h1 {
                             
                     }
         }
+
+
+    .ring h1
+    {
+            opacity: 0;
+
+                animation: titlefade 3s ease forwards;
+
+            animation-delay: 0.5s
+    }
+
+
+    @keyframes titlefade
+      {
+       to
+       {
+        opacity: 1;
+       }
+    }
