@@ -744,3 +744,37 @@ h1 {
         opacity: 1;
        }
     }
+
+
+        @media (prefers-reduced-motion: reduce)
+        {
+            .spin
+            {
+                animation: none;
+            }
+
+                .ring h1
+                {
+                        animation: none;
+
+                            opacity: 1;
+                }
+
+                    .entry
+                    {
+                        opacity: 1;
+
+                            transform: none;
+
+                                transition: none;
+                    }
+        
+
+        .menu
+        .viewer,
+        .panel
+        {
+
+            transition: none;
+        }
+    }
