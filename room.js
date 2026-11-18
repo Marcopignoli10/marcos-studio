@@ -25,7 +25,7 @@
                           
                             gallery.appendChild(block);
 
-            
+            //
             });
 
             updateCounter();
