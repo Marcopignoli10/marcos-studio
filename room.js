@@ -21,7 +21,7 @@
             {
                     const block = document.createElement("figure");
                           block.className="work";
-                          block.innerHTML = '<img class="piece" src="'+ drawing.image + '" alt="' + drawing.title + '">' + '<figcaption class="caption">' + drawing.title + ' ' + drawing.year + '</figcaption>';
+                          block.innerHTML = '<img loading="lazy" class="piece" src="' + drawing.image + '" alt="' + drawing.title + '">' + '<figcaption class="caption">' + drawing.title + ' ' + drawing.year + '</figcaption>';
                           
                             gallery.appendChild(block);
 
