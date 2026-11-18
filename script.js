@@ -122,4 +122,38 @@ function openMenu()
         }
     
 
+        document.querySelectorAll("a").forEach(function (link)   //since link is picked, the page will fade out first then on to the next page
+    
+    {
+                link.addEventLIstener("click", function (event)
+            
+            {
+                        const address = link.getAttribute("href");
+
+                            if (address && address.endsWith(".html"))
+
+                                    {
+                                        event.preventDefault();    //stop the jump asap
+
+                                            document.body.classList.add("Leaving");
+
+                                        setTimeout(function ()
+                                    {
+
+                                        window.location.href = address;
+                                    }, 400);
+
+                                    }
+
+
+            });
+    });
+
+
+
+            window.addEventListener("pageshow", function ()
+            {
+                document.body.classList.remove("leaving");
+            });
+    
         
