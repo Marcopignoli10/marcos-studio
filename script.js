@@ -77,11 +77,11 @@ function openMenu()
         if (timeline)
         {
             const evoCounter = document.createElement("p");
-                evoCounter.className = "counter";
+                evoCounter.className = "counter evo-only";
             document.body.appendChild(evoCounter);
 
             const evoProgress = document.createElement("div");
-                evoProgress.className = "progress";
+                evoProgress.className = "progress evo-only";
             document.body.appendChild(evoProgress);
 
                 function updateEvolution()
