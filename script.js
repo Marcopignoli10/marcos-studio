@@ -71,3 +71,55 @@ function openMenu()
                 link.addEventListener("click", closeMenu);
 
         });
+
+    const timeline = document.querySelector(".timeline");    //a counter and progress line but test out more ideas
+
+        if (timeline)
+        {
+            const evoCounter = document.createElement("p");
+                evoCounter.className = "counter";
+            document.body.appendChild(evoCounter);
+
+            const evoProgress = document.createElement("div");
+                evoProgress.className = "progress";
+            document.body.appendChild(evoProgress);
+
+                function updateEvolution()
+                {
+                    const middle = timeline.scrollLeft + timeline.clientWidth / 2;   //indication ie closest to the middle of the screen
+                        let current = 0;
+                            let smallestGap = Infinity;
+
+                        
+                    allEntries.forEach(function (entry, i)
+                {
+                            const entryMiddle = entry.offsetLeft + entry.clientWidth / 2;
+
+                            const gap = Math.abs(entryMiddle - middle);
+
+                                if (gap < smallestGap)
+                                {
+                                    smallestGap = gap;
+
+                                    current = i;
+                                }
+                });
+
+                    evoCounter.textContent = (current + 1) + " / " + allEntries.length;
+
+
+                                    const maxScroll = timeline.scrollWidth - timeline.clientWidth;   //timeline progress
+
+                                    if (maxScroll > 0)
+
+                                    {
+                                            evoProgress.style.width = (timeline.scrollLeft / maxScroll) * 100 + "%";
+                                    }
+                }
+
+                timeline.addEventListener("scroll", updateEvolution);
+                updateEvolution();
+        }
+    
+
+        
