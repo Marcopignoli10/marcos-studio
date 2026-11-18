@@ -3,10 +3,10 @@
         {"title": "Regular mondays", "year": 2025, "image": "images/drawing1.jpg_result.webp" },
             {"title": "Absolute Batman", "year": 2025, "image": "images/drawing2.jpg_result.webp" },
                 {"title": "Grace", "year": 2025, "image": "images/drawing3.jpg_result.webp" },
-                    {"title": "Bright boy", "year": 2026, "image": "images/fantasy4.webp" },
-                        {"title": "What if", "year": 2022, "image": "images/fantasy5.webp" },
-                            {"title": "Hulk", "year": 2025, "image": "images/fantasy6.webp" },
-                                {"title": "Batman Beyond", "year": 2025, "image": "images/fantasy7.webp" }
+                    {"title": "Bright boy", "year": 2026, "image": "images/Fantasy4.webp" },
+                        {"title": "What if", "year": 2022, "image": "images/Fantasy5.webp" },
+                            {"title": "Hulk", "year": 2025, "image": "images/Fantasy6.webp" },
+                                {"title": "Batman Beyond", "year": 2025, "image": "images/Fantasy7.webp" }
 
 
     ],
