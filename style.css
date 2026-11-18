@@ -768,7 +768,11 @@ h1 {
 
                                 transition: none;
                     }
-        
+
+                        body
+                        {
+                            animation: none;
+                        }
 
         .menu
         .viewer,
@@ -921,3 +925,21 @@ h1 {
                     display: block;
             }
         }
+
+
+        body  /*fade in the page when it opens */
+        {
+
+                animation: pagefade 0.6s ease;
+        }
+
+                @keyframes pagefade
+                {
+                    from { opacity: 0; }
+
+                    to { opacity: 1; }
+                }
+
+
+
+
