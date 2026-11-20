@@ -1065,3 +1065,13 @@ body.leaving
                                             object-fit: contain;
                                                 background-color: var(--bg);
                         }
+
+
+                .gallery .caption
+                {
+
+                        font-family: var(--font-label);
+                            font-size: 0.65rem;
+                                letter-spacing: 0.1rem;
+                                    text-transform: uppercase;
+                }
