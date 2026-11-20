@@ -773,7 +773,10 @@ h1 {
                         {
                             animation: none;
                         }
-
+                                        .viewer.open .viewer-image
+                                        {
+                                            animation: none;
+                                        }
         .menu
         .viewer,
         .panel
@@ -1016,3 +1019,14 @@ body.leaving
                                     text-align: left;
                             }
             }
+
+                                .viewer.open .viewer-image
+                                {
+                                        animation: drawingfade 0.5s ease;
+                                }
+
+                                @keyframes drawingfade
+                                {
+                                    from { opacity: 0; }
+                                    to { opacity: 1; }
+                                }
