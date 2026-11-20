@@ -125,7 +125,7 @@ function openMenu()
         document.querySelectorAll("a").forEach(function (link)   //since link is picked, the page will fade out first then on to the next page
     
     {
-                link.addEventLIstener("click", function (event)
+                link.addEventListener("click", function (event)
             
             {
                         const address = link.getAttribute("href");

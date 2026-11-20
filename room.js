@@ -20,7 +20,9 @@
                 drawings.forEach(function (drawing) 
             {
                     const block = document.createElement("figure");
-                          block.className="work";
+                                block.className="work";
+                                        block.dataset.materials = drawing.materials || "";
+
                           block.innerHTML = '<img loading="lazy" class="piece" src="' + drawing.image + '" alt="' + drawing.title + '">' + '<figcaption class="caption">' + drawing.title + ' ' + drawing.year + '</figcaption>';
                           
                             gallery.appendChild(block);
@@ -127,24 +129,71 @@
         const viewer = document.createElement("div");  //big view of a single sketch
                 
                 viewer.className = "viewer";
-                        viewer.innerHTML = '<button class="viewer-close" aria-label="Close">X</button><img class="viewer-image" src="" alt="">';
+                        viewer.innerHTML = '<button class="viewer-close" aria-label="Close">X</button><img class="viewer-image" src="" alt=""><p class="viewer-info"></p>';
                                 document.body.appendChild(viewer);
 
                         const viewerImage = viewer.querySelector(".viewer-image");
                                 const viewerClose = viewer.querySelector(".viewer-close");
+                                        const viewerInfo = viewer.querySelector(".viewer-info");
+
+                                        let viewerIndex = 0;
+
+                                                function showDrawing(number)
+                                                {
+                                                        const figure = gallery.children[number];
+                                                                const picture = figure.querySelector(".piece");
+                                                                      const caption = figure.querySelector(".caption").textContent;
+                                                                      
+                                                                      viewerImage.src = picture.src;
+                                                                        viewerImage.alt = picture.alt;
+                                                                                viewerInfo.innerHTML = caption + "<br>" + figure.dataset.materials;
+
+                                                                                viewerIndex = number;
+                                                }
 
 
         gallery.addEventListener("click", function (event)
 {
         if (event.target.classList.contains("piece"))
         {
-                viewerImage.src = event.target.src;
+                const figure = event.target.parentElement;
 
-                        viewerImage.alt = event.target.alt;
+                const number = Array.from(gallery.children).indexOf(figure);
 
+                        showDrawing(number);
                                 viewer.classList.add("open");
         }
 });
+
+
+                const viewerLeft = document.createElement("button");
+                        viewerLeft.className = "viewer-arrow viewer-left";
+                                viewerLeft.textContent = "<";
+                                        viewer.appendChild(viewerLeft);
+
+                const viewerRight = document.createElement("button");
+                        viewerRight.className = "viewer-arrow viewer-right";
+                                viewerRight.textContent = ">";
+                                        viewer.appendChild(viewerRight);
+
+                                        viewerLeft.addEventListener("click", function ()
+                                        {
+                                                        if (viewerIndex > 0){
+                                                                        showDrawing(viewerIndex - 1);
+                                                        }
+                                        });
+
+                                        viewerRight.addEventListener("click", function ()
+                                        {
+                                                        if (viewerIndex < gallery.children.length -1)
+                                                                {
+                                                                        showDrawing(viewerIndex + 1);
+                                                        }
+                                        });
+
+
+
+
 
                 function closeViewer()
                 {
