@@ -787,6 +787,12 @@ h1 {
                                                         transition: none;
                                         }
 
+                                            .rooms h1
+                                            {
+                                                animation: none;
+                                                    opacity: 4;
+                                            }
+
         .menu
         .viewer,
         .panel
@@ -1112,3 +1118,22 @@ body.leaving
                                             .menu.open a:nth-child(6) { transition-delay: 0.16; }
 
                                                 .menu.open a:nth-child(7) { transition-delay: 0.7s; }
+
+        .rooms h1
+        {
+            opacity: 0;
+                animation: titlefade 1s ease forwards;
+        }
+
+
+            .ring.paused .spin
+            {
+                    animation-play-state: paused;
+            }
+
+                .ring img.picked
+                {
+                        transform: rotate(calc(var(--i) * 30deg)) translateY(-140px) scale(2);
+
+                        z-index: 2;
+                }

@@ -157,3 +157,36 @@ function openMenu()
             });
     
         
+
+            const ring = document.querySelector(".ring");
+
+                if (ring)
+                {
+                    const ringPictures = ring.querySelectorAll("img");
+
+                        function resumeRing()
+                        {
+                            ring.classList.remove("paused");
+
+                            ringPictures.forEach(function (picture)
+                        
+                        {
+                                picture.classList.remove("picked");
+                        });
+
+                        }
+
+                    ringPictures.forEach(function (picture)
+                {
+                        picture.addEventListener("click", function (event)
+                    {
+
+                            event.stopPropagation();
+                                resumeRing();
+                                    picture.classList.add("picked");
+                                        ring.classList.add("paused");
+                    });
+                });
+
+                    document.addEventListener("click", resumeRing);
+            }
