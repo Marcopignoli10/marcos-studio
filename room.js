@@ -207,10 +207,27 @@
         
                         document.addEventListener("keydown", function (event)
                         {
-                                if (event.key === "Escape")
+                                if (!viewer.classList.contains("open"))  //keyboard arrow accessibility
                                 {
-                                        closeViewer();
+                                        return;
                                 }
+
+                                        if (event.key === "Escape")
+                                        {
+                                                closeViewer();
+
+                                        }
+
+                                                if (event.key === "ArrowLeft" && viewerIndex > 0)
+                                                {
+                                                        showDrawing(viewerIndex - 1);
+
+                                                }
+
+                                                        if (event.key === "ArrowRight" && viewerIndex < gallery.children.length - 1)
+                                                        {
+                                                                showDrawing(viewerIndex + 1);
+                                                        }
                         });
 
 
