@@ -191,6 +191,16 @@
                                                         }
                                         });
 
+                                        const viewerZoom = document.createElement("button");
+                                                viewerZoom.className = "viewer-zoom";
+                                                        viewerZoom.textContent = "ZOOM";
+                                                                viewer.appendChild(viewerZoom);
+
+                                                                viewerZoom.addEventListener("click", function ()
+                                                        {
+                                                                        viewerImage.requestFullscreen();
+                                                        });
+
 
 
 
