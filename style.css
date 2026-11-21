@@ -1162,3 +1162,22 @@ body.leaving
                     border-top: none;
                 }
         }
+
+        @media (min-width: 768px)
+        {
+                .year
+                {
+                        color: var(--text)
+
+                        transition: color 0.3s ease;
+
+                }
+                    .enry.active-year .year
+                    {
+                        color: var(--accent);
+                    }
+                        .entry.active-year::before
+                        {
+                            background-color: var(--accent);
+                        }
+        }

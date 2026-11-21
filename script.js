@@ -106,7 +106,10 @@ function openMenu()
                 });
 
                     evoCounter.textContent = (current + 1) + " / " + allEntries.length;
-
+                    allEntries.forEach(function (entry, i)
+                {
+                    entry.classList.toggle("active-year", i === current);
+                })
 
                                     const maxScroll = timeline.scrollWidth - timeline.clientWidth;   //timeline progress
 
