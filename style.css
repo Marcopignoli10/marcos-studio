@@ -1137,3 +1137,28 @@ body.leaving
 
                         z-index: 2;
                 }
+
+
+        @media (min-width: 768px)
+        {
+                .timeline
+                {
+                    background-image: linear-gradient(var(--text), var(--text));
+
+                        background-repeat: no-repeat;
+
+                            background-size: 100% 1px;
+
+                                background-position: 0 2rem;
+
+                                    background-attachment: local;
+
+
+
+                }
+
+                .entry
+                {
+                    border-top: none;
+                }
+        }
