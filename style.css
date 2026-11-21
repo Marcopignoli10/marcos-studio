@@ -801,6 +801,12 @@ h1 {
                                                     transition: none;
                                                 }  
 
+                                                    .about .piece,
+                                                    .about .story
+                                                    {
+                                                            animation: none;
+                                                    }
+
         .menu
         .viewer,
         .panel
@@ -1203,3 +1209,23 @@ body.leaving
                                 {
                                     opacity: 1;
                                 }
+
+
+        .about .piece
+        {
+                animation: aboutfade 1s ease both;
+        }
+
+            .about .story
+            {
+                    animation: aboutfade 1s ease both;
+
+                    animation-delay: 0.6s;
+            }
+
+                @keyframes aboutfade
+                {
+                        from { opacity: 0; }
+                        
+                        to { opacity: 1; }
+                } 
