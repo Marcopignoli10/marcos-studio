@@ -65,7 +65,7 @@ function openMenu()
             }
     });
 
-
+//
         menu.querySelectorAll("a").forEach(function (link)
         {
                 link.addEventListener("click", closeMenu);
