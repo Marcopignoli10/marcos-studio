@@ -193,3 +193,22 @@ function openMenu()
 
                     document.addEventListener("click", resumeRing);
             }
+
+
+            const allChapters = document.querySelectorAll(".chapter");
+
+            const chapterWatcher = new IntersectionObserver(function (watchedItems)
+        {
+                    watchedItems.forEach(function (item)
+                {
+                            if (item.isIntersecting)
+                            {
+                                    item.target.classList.add("visible");
+                            }
+                });
+        });
+
+                    allChapters.forEach(function (chapter)
+                {
+                        chapterWatcher.observe(chapter);
+                });

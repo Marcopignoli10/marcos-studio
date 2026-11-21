@@ -793,6 +793,14 @@ h1 {
                                                     opacity: 4;
                                             }
 
+                                                .chapter .label,
+                                                .chapter h2
+                                                {
+                                                    opacity: 1;
+
+                                                    transition: none;
+                                                }  
+
         .menu
         .viewer,
         .panel
@@ -1181,3 +1189,17 @@ body.leaving
                             background-color: var(--accent);
                         }
         }
+
+                    .chapter .label,
+                        .chapter h2
+                        {
+                            opacity: 0;
+
+                            transition: opacity 1.2s ease;
+                        }
+
+                            .chapter.visible .label,
+                                .chapter.visible h2
+                                {
+                                    opacity: 1;
+                                }
