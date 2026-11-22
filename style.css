@@ -1260,3 +1260,18 @@ body.leaving
                                                 margin: -26px 0 0 -26px;
                                 }
                 }
+
+
+        @media (max-width: 768px)
+        {
+                .back
+        {
+            position: fixed;
+                left: 1rem;
+                    bottom: 1.5rem;
+                        z-index: 5;
+                            padding: 0.6rem 0.8rem;
+                                background-color: rgba(10, 10, 10, 0.8);
+                                    border: 1px solid var(--text);
+        }
+    }
