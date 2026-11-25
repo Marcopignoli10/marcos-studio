@@ -13,7 +13,12 @@
     "portraits": [
          {"title": "Chelsea", "year": 2025, "materials": "Pencil on paper", "image": "images/portrait1_result.webp" },
             {"title": "Amara", "year": 2025, "materials": "Pencil on paper", "image": "images/portrait3_result.webp" },
-                {"title": "kait", "year": 2026, "materials": "Pencil on paper", "image": "images/portrait2_result.webp" }
+                {"title": "kait", "year": 2026, "materials": "Pencil on paper", "image": "images/portrait2_result.webp" },
+                    {"title": "Stef", "year": 2025, "materials": "Pencil on paper", "image": "images/Stef_result.webp" },
+                        {"title": "Fummi", "year": 2025, "materials": "Pencil on paper", "image": "images/Fummi_result.webp" },
+                            {"title": "Doose", "year": 2024, "materials": "Pencil on paper", "image": "images/Doose_result.webp" },
+                                {"title": "Beth", "year": 2023, "materials": "Pencil on paper", "image": "images/Beth_result.webp" }
+
     ],
 
     "digitalart": [
